@@ -1,3 +1,8 @@
+/**
+@Author : Bhavesh Gadoya
+@Description : Changing the case of string in scala
+Reference link : http://www.scala-lang.org/api/2.9.3/scala/Char.html
+*/
 import java.io.BufferedReader
 import java.io.InputStreamReader
 object ChangeCase {
