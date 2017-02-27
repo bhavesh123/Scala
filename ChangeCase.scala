@@ -1,26 +1,27 @@
-/* Toggle string problem in scala, changing the case of string from upper to lower & vice-versa in scala */
 import java.io.BufferedReader
 import java.io.InputStreamReader
 object ChangeCase {
     def main(args: Array[String]) {
     val reader = new BufferedReader(new InputStreamReader(System.in))
-    var line:String = null
-    val final_output = new StringBuffer()
+    var line:String = ""
+    //val final_output = new StringBuffer()
+    var final_output:String = "";
     try{
     line = reader.readLine()
-    var output:String = null
+    var output:String = ""
     var data:Array[Char] = line.toCharArray()
+    /* char class support direct conversion to string , no need for string buffer we can directly append a char to string */
     for(c:Char <- data){
-    val temp = new StringBuilder();
-    temp.append(c)
-    if(temp.toString().toLowerCase().compareTo(temp.toString()) == 0){
-    output = temp.toString().toUpperCase()  
+    var temps:String = "";
+    temps+=c;
+    if(temps.toString().toLowerCase().compareTo(temps.toString()) == 0){
+    output = temps.toString().toUpperCase()  
     }
     else{
-      output = temp.toString().toLowerCase()
+      output = temps.toString().toLowerCase()
+     }
+    final_output+=output;
     }
-    final_output.append(output);
-        }
     println(final_output.toString());
     }
     catch{
