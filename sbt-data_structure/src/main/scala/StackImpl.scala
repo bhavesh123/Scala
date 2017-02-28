@@ -24,6 +24,11 @@ Constraints:
 1 ≤ Q ≤ 105
 1 ≤ C ≤ 107
  */
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import scala.collection.mutable.Stack;
@@ -53,11 +58,13 @@ object StackImpl {
     var inputs = new Array[String](input);
     var i: Integer = 0
     for (i <- 0 until input) {
-      inputs(i) = br.readLine();
+      inputs(i) = br.readLine()
+    }
+    for(i<-0 until inputs.length){
       var splitdata: Array[String] = inputs(i).split(" ");
       if (Integer.parseInt(splitdata(0)) == 1) {
         println(pop);
-      } else if (Integer.parseInt(splitdata(1)) == 2) {
+      } else if (Integer.parseInt(splitdata(0)) == 2) {
         var value: Integer = Integer.parseInt(splitdata(1));
         push(value)
       }
